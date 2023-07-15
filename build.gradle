@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "org.example"
+group = "Curso Udemy"
 version = "1.0-SNAPSHOT"
 sourceCompatibility = 13
 
