@@ -4,7 +4,10 @@ plugins {
 
 group = "Curso Udemy"
 version = "1.0-SNAPSHOT"
-sourceCompatibility = 13
+java {
+    sourceCompatibility = JavaVersion.VERSION_15
+    targetCompatibility = JavaVersion.VERSION_15
+}
 
 repositories {
     mavenCentral()

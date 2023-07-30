@@ -2,6 +2,7 @@ package steps;
 
 // Comodin para que optimice toda
 import io.cucumber.java.en.*;
+import pages.GooglePage;
 
 //import io.cucumber.java.en.And;
 //import io.cucumber.java.en.Given;
@@ -10,11 +11,15 @@ import io.cucumber.java.en.*;
 
 // Step Definition Class
 public class GoogleSteps {
+	// Instancia de la pagina Google
+	GooglePage google = new GooglePage();
+
 
 	// "^ TextoQueQuieroEvaluar $"
 	@Given("^I am on the Google search page$")
 	public void navigateToGoogle(){
-
+	// Instancia de WebDriver utiliza el metodo para navegar a Google
+	google.navigateToGoogle();
 	}
 	@When("^ I enter a search criteria $")
 	public void enterSearchCriteria(){
