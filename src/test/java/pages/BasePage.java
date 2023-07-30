@@ -1,8 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -32,7 +35,23 @@ public class BasePage {
 
 	public static void navigateTo(String url){
 		driver.get(url);
+	}
 
+	// Metodo que devuelve un web element y Selenium puede trabajar con el
+	private WebElement Find(String locator){
 
+		return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+	}
+
+	public void clickElement(String locator){
+		// Dado un xpath (locator), va a localizarlo y va a hacer un click sobre este elemento
+		Find(locator).click();
+	}
+
+	public void write(String locator, String textToWrite){
+		// Limpiar el campo de texto
+		Find(locator).clear();
+		// Enviar el texto al campo de texto
+		Find(locator).sendKeys(textToWrite);
 	}
 }
