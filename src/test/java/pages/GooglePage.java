@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 public class GooglePage extends BasePage{
 
 	private String searchButton = "//input[@value='Buscar con Google']";
-	private String searchTextField = "//input[@title='Buscar']";
+	private String searchTextField = "//textarea[@name='q']";
 
 
 	// Necesario para heredar
