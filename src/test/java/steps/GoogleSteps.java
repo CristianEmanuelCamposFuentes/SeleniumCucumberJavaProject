@@ -24,7 +24,7 @@ public class GoogleSteps {
 	}
 	@When("^I enter a search criteria$")
 	public void enterSearchCriteria(){
-		google.enterSearchCriteria("Google");
+		google.enterSearchCriteria("Villa La Angostura Imagenes");
 	}
 	@And("^click on the search button$")
 	public void clickSearchButton(){

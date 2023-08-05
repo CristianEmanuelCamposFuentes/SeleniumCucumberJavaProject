@@ -15,7 +15,7 @@ public class BasePage {
 	// Creamos un objeto estatico para el driver
 	protected static WebDriver driver;
 	//Creamos un objeto estatico para el wait
-	private static WebDriverWait wait;
+	protected static WebDriverWait wait;
 
 	// Creamos un bloque estatico a donde creamos el driver una vez para todas las instancias que creemos en las otras clases de pagina
 	// Y agregamos una espera de 10 segundos
@@ -44,8 +44,12 @@ public class BasePage {
 	}
 
 	public void clickElement(String locator){
+		// Le agrego una espera al elemento web
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+
+		element.click();
 		// Dado un xpath (locator), va a localizarlo y va a hacer un click sobre este elemento
-		Find(locator).click();
+//		Find(locator).click();
 	}
 
 	public void write(String locator, String textToWrite){
