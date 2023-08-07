@@ -5,11 +5,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GooglePage extends BasePage{
 
+	// Defino los selectores de elementos
 	private String searchButton = "//input[@value='Buscar con Google']";
 	private String searchTextField = "//textarea[@name='q']";
 
 
-	// Necesario para heredar
+	// Constructor , es necesario para heredar
 	public GooglePage() {
 		super(driver);
 	}
