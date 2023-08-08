@@ -21,6 +21,17 @@ public class BasePage {
 	// Y agregamos una espera de 10 segundos
 	static {
 		ChromeOptions chromeOptions = new ChromeOptions();
+		//Esta línea permite a las páginas web solicitar recursos de otros orígenes (dominios) usando XMLHttpRequest
+		// y Fetch API a través de la política de origen cruzado (CORS). El * indica que cualquier origen está permitido.
+		// Esto puede ser útil durante el desarrollo para evitar restricciones CORS al acceder a recursos externos./**/
+//		chromeOptions.addArguments("--remote-allow-origins=*");
+
+		// Utiliza la configuracion de datos (perfil, extensiones, marcadores) de Chrome que existe en la ruta indicada
+		// Donde dice "taba_" reemplazar por tu usuario en Windows
+		chromeOptions.addArguments("user-data-dir=C:/Users/taba_/AppData/Local/Google/Chrome/User Data");
+
+		// Desactiva las notificaciones durante las pruebas
+		chromeOptions.addArguments("--disable-notifications");
 		// Instancia del navegador
 		driver = new ChromeDriver(chromeOptions);
 		// La instancia de la espera, en caso de que no conecte agregar una excepcion
