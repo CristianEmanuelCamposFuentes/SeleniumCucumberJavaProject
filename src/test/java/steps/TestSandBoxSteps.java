@@ -14,6 +14,6 @@ public class TestSandBoxSteps {
 
 	@And("^Select a value from the dropdowns$")
 	public void selectState(){
-		sandBoxPage.selectCategory("Manual");
+		sandBoxPage.selectCategory("Action");
 	}
 }

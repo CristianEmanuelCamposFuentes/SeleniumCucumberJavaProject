@@ -1,7 +1,7 @@
 package pages;
 
 public class TestSandBox extends BasePage{
-	private String categoryDropdown = "//select[@id='testingDropdown']";
+	private String categoryDropdown = "//button[@id='dropdown-basic']";
 
 	// Constructor
 	public TestSandBox(){
@@ -9,10 +9,16 @@ public class TestSandBox extends BasePage{
 	}
 
 	public void navigateToSandBox(){
-		navigateTo("https://www.testandquiz.com/selenium/testing.html");
+		navigateTo("https://react-bootstrap.netlify.app/docs/components/dropdowns");
 	}
 
 	public void selectCategory(String category){
-		selectFromDropdownByValue(categoryDropdown, category);
+		// Al ser un button, le hago click y despues elijo la opcion
+		clickElement(categoryDropdown);
+
+		// Construyo el selector y despues ofrezco la opcion en base al texto
+		String optionSelector = "//a[contains(text(), '" + category + "')]";
+		// Click a la opcion elegida
+		clickElement(optionSelector);
 	}
 }
