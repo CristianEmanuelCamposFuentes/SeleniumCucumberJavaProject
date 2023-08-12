@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,6 +18,7 @@ public class BasePage {
 	protected static WebDriver driver;
 	//Creamos un objeto estatico para el wait
 	protected static WebDriverWait wait;
+	protected static Actions action;
 
 	// Creamos un bloque estatico a donde creamos el driver una vez para todas las instancias que creemos en las otras clases de pagina
 	// Y agregamos una espera de 10 segundos
@@ -97,5 +99,17 @@ public class BasePage {
 		Select dropdown = new Select(Find(locator));
 		// Seleccionar por index
 		dropdown.selectByVisibleText(valueToSelect);
+	}
+
+	public void hoverOverElement(String locator){
+		action.moveToElement(Find(locator));
+	}
+
+	public void doubleClick(String locator){
+		action.doubleClick(Find(locator));
+	}
+
+	public void rightClick(String locator){
+		action.contextClick(Find(locator));
 	}
 }
