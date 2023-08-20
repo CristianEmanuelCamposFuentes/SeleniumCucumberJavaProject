@@ -115,7 +115,7 @@ public class BasePage {
 
 	public String getValueFromTable(String locator, int row, int column){
 		String cellINeed = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
-
+//		private String cell = "//*[@id='root']/div/div[7]/div/table/tbody/tr[1]/td[1]";
 		return Find(cellINeed).getText();
 
 	}

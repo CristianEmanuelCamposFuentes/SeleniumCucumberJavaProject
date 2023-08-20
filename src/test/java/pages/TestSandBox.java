@@ -1,7 +1,8 @@
 package pages;
 
 public class TestSandBox extends BasePage{
-	private String categoryDropdown = "//button[@id='dropdown-basic']";
+	private String categoryDropdown = "/html/body/div[1]/div/div[7]/div/table/tbody/tr[1]/td[2]";
+	
 
 	// Constructor
 	public TestSandBox(){
