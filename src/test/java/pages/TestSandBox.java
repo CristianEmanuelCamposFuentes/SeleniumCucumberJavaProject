@@ -9,7 +9,7 @@ public class TestSandBox extends BasePage{
 	}
 
 	public void navigateToSandBox(){
-		navigateTo("https://react-bootstrap.netlify.app/docs/components/dropdowns");
+		navigateTo("https://thefreerangetester.github.io/sandbox-automation-testing/");
 	}
 
 	public void selectCategory(String category){
