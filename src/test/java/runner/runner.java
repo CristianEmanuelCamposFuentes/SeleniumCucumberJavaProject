@@ -19,4 +19,3 @@ public class runner {
 
 }
 
-//System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");

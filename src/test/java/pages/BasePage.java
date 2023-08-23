@@ -31,14 +31,14 @@ public class BasePage {
 
 		// Utiliza la configuracion de datos (perfil, extensiones, marcadores) de Chrome que existe en la ruta indicada
 		// Donde dice "taba_" reemplazar por tu usuario en Windows
-		chromeOptions.addArguments("user-data-dir=C:/Users/taba_/AppData/Local/Google/Chrome/User Data");
+//		chromeOptions.addArguments("user-data-dir=C:\\Users\\crist\\AppData\\Local\\Google\\Chrome\\User Data");
 
-		// Desactiva las notificaciones durante las pruebas
-		chromeOptions.addArguments("--disable-notifications");
 		// Instancia del navegador
 		driver = new ChromeDriver(chromeOptions);
 		// La instancia de la espera, en caso de que no conecte agregar una excepcion
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		action = new Actions(driver);
 	}
 
 	// Constructor
@@ -115,7 +115,6 @@ public class BasePage {
 
 	public String getValueFromTable(String locator, int row, int column){
 		String cellINeed = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
-//		private String cell = "//*[@id='root']/div/div[7]/div/table/tbody/tr[1]/td[1]";
 		return Find(cellINeed).getText();
 
 	}

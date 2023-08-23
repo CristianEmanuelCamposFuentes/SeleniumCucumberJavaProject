@@ -1,25 +1,24 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 public class TestSandBox extends BasePage{
-	private String categoryDropdown = "/html/body/div[1]/div/div[7]/div/table/tbody/tr[1]/td[2]";
-	
+	private String tableLocator = "//table[@class='table table-striped table-bordered table-hover']";
 
 	// Constructor
-	public TestSandBox(){
+	public TestSandBox(WebDriver driver) {
 		super(driver);
 	}
 
-	public void navigateToSandBox(){
+	public void navigateToSandBox() {
 		navigateTo("https://thefreerangetester.github.io/sandbox-automation-testing/");
 	}
 
-	public void selectCategory(String category){
-		// Al ser un button, le hago click y despues elijo la opcion
-		clickElement(categoryDropdown);
-
-		// Construyo el selector y despues ofrezco la opcion en base al texto
-		String optionSelector = "//a[contains(text(), '" + category + "')]";
-		// Click a la opcion elegida
-		clickElement(optionSelector);
+	public String getValueFromTable(int row, int column) {
+		String cellLocator = tableLocator + "/tbody/tr[" + row + "]/td[" + column + "]";
+		WebElement cellElement = driver.findElement(By.xpath(cellLocator));
+		return cellElement.getText();
 	}
 }
