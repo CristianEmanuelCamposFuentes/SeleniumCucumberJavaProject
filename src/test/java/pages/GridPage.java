@@ -6,9 +6,15 @@ import org.openqa.selenium.WebElement;
 
 
 public class GridPage extends BasePage {
+    private String tableLocator = "//*[@id=\"root\"]/div/div[8]/div";
 
-    public GridPage(WebDriver driver) {
+    public GridPage() {
+
         super(driver);
+    }
+
+    public void navigateToGrid(){
+        navigateTo("https://thefreerangetester.github.io/sandbox-automation-testing/");
     }
 
     public String getValueFromCell(int row, int column) {
@@ -23,5 +29,9 @@ public class GridPage extends BasePage {
         String headerXPath = String.format("//*[@id='root']/div/div[8]/div/table/thead/tr/th[%d]", column);
         WebElement header = driver.findElement(By.xpath(headerXPath));
         return header.getText();
+    }
+
+    public String getValueFromGrid(int row, int column){
+        return getValueFromTable(tableLocator, row, column);
     }
 }
