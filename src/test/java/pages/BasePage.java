@@ -142,4 +142,16 @@ public class BasePage {
 		String cellINeed = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
 		return Find(cellINeed).getText();
 	}
+
+	public void switchToiFrame(int iFrameIndex){
+		driver.switchTo().frame(iFrameIndex);
+	}
+
+	public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+    }
+
+	public void dismissAlert(){
+		driver.switchTo().alert().dismiss();
+	}
 }
