@@ -1,9 +1,9 @@
 package steps;
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.GridPage;
 
 public class GridTestSteps {
@@ -19,9 +19,11 @@ public class GridTestSteps {
 	public void returnValue() {
 		// Acceder a los valores en la tabla y realizar acciones
 		String value = grid.getValueFromCell(1, 2);
+		Assert.assertEquals("Messi", value);
 		System.out.println("Valor de la celda (1, 2): " + value);
 
 		String header = grid.getHeaderValue(3);
+		Assert.assertEquals("Edad", header);
 		System.out.println("Encabezado de la columna 3: " + header);
 	}
 
@@ -29,6 +31,6 @@ public class GridTestSteps {
     public void getValueFromGrid() {
 
 		String valueTwo = grid.getValueFromGrid(2, 2);
-		System.out.println(valueTwo);
+		Assert.assertEquals("Ronaldo", valueTwo);
 	}
 }
