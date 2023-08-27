@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -99,6 +100,30 @@ public class BasePage {
 		Select dropdown = new Select(Find(locator));
 		// Seleccionar por index
 		dropdown.selectByVisibleText(valueToSelect);
+	}
+
+	public void verTypeFile(){
+		String change_visibility = "$(\"#fileField\").css(\"visibility,\"visible\");";
+		String change_display = "$(\"#fileField\").css(\"display, \"block\");";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript(change_display);
+		js.executeScript(change_visibility);
+
+		/* ALGUNOS COMANDOS QUE PUEDEN SERVIR EN LA BUSQUEDA DE MOSTRAR LOS WEB ELEMENTS
+		*
+		* ("#fileField").style.visibility="visible";
+		("#fileField").style.display="block";
+		("#fileField").style.width="200px";
+		("#fileField").style.height="200px";
+		("#fileField").style.position="fixed";
+		("#fileField").style.overflow="visible";
+		("#fileField").style.zIndex="999999";
+		("#fileField").style.top="500px";
+		("#fileField").style.bottom="500px";
+		("#fileField").style.left="500px";
+		("#fileField").style.right="500px";
+		("#fileField").style.marginBottom="100px";
+		* */
 	}
 
 	public void hoverOverElement(String locator){
