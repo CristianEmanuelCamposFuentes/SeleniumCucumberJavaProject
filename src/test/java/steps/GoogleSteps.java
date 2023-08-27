@@ -2,6 +2,7 @@ package steps;
 
 // Comodin para que optimice toda
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 import pages.GooglePage;
 
 //import io.cucumber.java.en.And;
@@ -32,6 +33,7 @@ public class GoogleSteps {
 	}
 	@Then("^the results match the criteria$")
 	public void validateResults(){
+		Assert.assertEquals("Texto que esperamos", google.firstResult());
 
 	}
 

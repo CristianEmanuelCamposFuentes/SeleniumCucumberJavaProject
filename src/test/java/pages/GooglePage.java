@@ -8,6 +8,7 @@ public class GooglePage extends BasePage{
 	// Defino los selectores de elementos
 	private String searchButton = "//input[@value='Buscar con Google']";
 	private String searchTextField = "//textarea[@name='q']";
+	private String firstResult = "";
 
 
 	// Constructor , es necesario para heredar
@@ -26,5 +27,9 @@ public class GooglePage extends BasePage{
 
 	public void enterSearchCriteria(String criteria){
 		write(searchTextField, criteria);
+	}
+
+	public String firstResult(){
+		return textFromElement(firstResult);
 	}
 }

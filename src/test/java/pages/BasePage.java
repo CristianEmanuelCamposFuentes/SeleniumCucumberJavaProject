@@ -156,4 +156,11 @@ public class BasePage {
 	public void dismissAlert(){
 		driver.switchTo().alert().dismiss();
 	}
+
+	public String textFromElement(String locator){
+		return Find(locator).getText();
+	}
+
+
 }
+
