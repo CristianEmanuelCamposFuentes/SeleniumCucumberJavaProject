@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
 	// El WebDriver es la instancia del navegador que utilizamos para usar Selenium a nuestro gusto
@@ -175,6 +176,10 @@ public class BasePage {
 	public boolean elementIsEnabled(String locator){
 		// Devuelve un booleano si esta habilitado o no
 		return Find(locator).isEnabled();
+	}
+
+	public List<WebElement> bringMeAllElements(String locator){
+		return driver.findElements(By.className(locator));
 	}
 }
 
