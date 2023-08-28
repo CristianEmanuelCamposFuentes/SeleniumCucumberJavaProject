@@ -162,5 +162,19 @@ public class BasePage {
 	}
 
 
+	public boolean elementIsDisplayed(String locator){
+		// Devuelve un booleano si es mostrado o no
+		return Find(locator).isDisplayed();
+	}
+
+	public boolean elementIsSelected(String locator){
+        // Devuelve un booleano si es seleccionado o no
+        return Find(locator).isSelected();
+    }
+
+	public boolean elementIsEnabled(String locator){
+		// Devuelve un booleano si esta habilitado o no
+		return Find(locator).isEnabled();
+	}
 }
 

@@ -33,4 +33,9 @@ public class GridTestSteps {
 		String valueTwo = grid.getValueFromGrid(2, 2);
 		Assert.assertEquals("Ronaldo", valueTwo);
 	}
+
+	@Then("^I can validate the table is displayed$")
+    public void theTableIsThere() {
+		Assert.assertTrue("El elemento esta siendo mostrado.", grid.cellStatus());
+	}
 }

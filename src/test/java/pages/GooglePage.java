@@ -32,4 +32,5 @@ public class GooglePage extends BasePage{
 	public String firstResult(){
 		return textFromElement(firstResult);
 	}
+
 }

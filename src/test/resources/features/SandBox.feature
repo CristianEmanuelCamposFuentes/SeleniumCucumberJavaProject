@@ -9,3 +9,4 @@
     Given I Navigate to the dinamic table
     And I can return the value I wanted
     And Return other value that I want to proove
+    Then I can validate the table is displayed
