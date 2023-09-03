@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class ListPage extends BasePage {
     private String searchField = "//body/div[1]/div[1]/div[1]/span[1]/input[2]";
@@ -19,8 +20,15 @@ public class ListPage extends BasePage {
     }
 
     public void enterSearchCriteria() throws InterruptedException {
-        Thread.sleep(600); // Espera de 600 milisegundos
-        write(searchField, "Washington");
+        try{
+            Thread.sleep(600); // Espera de 600 milisegundos
+            write(searchField, "Washington");
+        } catch (NoSuchElementException e) {
+            System.out.println("The WebElement Search Field couldn't be found.");
+            // Imprimir la información detallada de la excepción
+            e.printStackTrace();
+        }
+
     }
 
     public List<String> getAllSearchResults(){
