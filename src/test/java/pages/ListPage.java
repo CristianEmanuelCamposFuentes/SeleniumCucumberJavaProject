@@ -14,7 +14,10 @@ public class ListPage extends BasePage {
     }
 
     public void enterSearchCriteria() throws InterruptedException {
-
+        Thread.sleep(600);
+        write(searchField, "Washington");
     }
+
+
 
 }
