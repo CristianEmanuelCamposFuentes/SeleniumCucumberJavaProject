@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListPage extends BasePage {
-    private String searchField = "//body/form[1]/input[1]";
-    private String searchResults = "name";
+    private String searchField = "//body/div[1]/div[1]/div[1]/span[1]/input[2]";
+    private String searchResults = "tt-suggestion";
 
     public ListPage() {
         super(driver);
@@ -19,7 +19,7 @@ public class ListPage extends BasePage {
     }
 
     public void enterSearchCriteria() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(600); // Espera de 600 milisegundos
         write(searchField, "Washington");
     }
 
@@ -36,11 +36,4 @@ public class ListPage extends BasePage {
         // Necesito Strings para despues validar que los textos se encuentren en una lista
         return stringsFromList;
     }
-
-
-
-
-
-
-
 }
