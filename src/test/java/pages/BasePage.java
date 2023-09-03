@@ -56,6 +56,10 @@ public class BasePage {
 		driver.get(url);
 	}
 
+	public static void closeBrowser(){
+		driver.quit();
+	}
+
 	// Metodo que devuelve un web element y Selenium puede trabajar con el, se va a crear esta instancia del WebElement y
 	// Navegador (con sus metodos), para despues a traves de la herencia reutilizar en tod o el proyecto.
 	private WebElement Find(String locator){

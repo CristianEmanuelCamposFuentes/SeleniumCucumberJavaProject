@@ -2,7 +2,9 @@
 package runner;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+import pages.BasePage;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -16,6 +18,9 @@ import org.junit.runner.RunWith;
 	Esta clase va a unir todas las funcionalidades, y los features
  * */
 public class runner {
-
+	@AfterClass
+	public static void cleanDriver() {
+		BasePage.closeBrowser();
+	}
 }
 
