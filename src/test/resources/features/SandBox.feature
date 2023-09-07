@@ -10,7 +10,7 @@
     And Return other value that I want to proove
     Then I can validate the table is displayed
 
-    @Test
+@Test
   Scenario: As a Test Engineer, I want to validate that text is present inside the list
     Given I navigate to the list page
     When I search the list
