@@ -10,7 +10,7 @@ import pages.BasePage;
 @CucumberOptions(
 		features = "src/test/resources/features/",
 		glue = "steps",
-		tags = "@Test"
+		tags = "@List"
 
 )
 
