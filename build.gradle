@@ -24,3 +24,6 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-junit:7.13.0'
 }
 
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}

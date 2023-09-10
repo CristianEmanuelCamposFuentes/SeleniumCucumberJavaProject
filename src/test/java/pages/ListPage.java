@@ -19,10 +19,10 @@ public class ListPage extends BasePage {
         navigateTo("https://twitter.github.io/typeahead.js/examples/");
     }
 
-    public void enterSearchCriteria() throws InterruptedException {
+    public void enterSearchCriteria(String state) throws InterruptedException {
         try{
             Thread.sleep(600); // Espera de 600 milisegundos
-            write(searchField, "Washington");
+            write(searchField, state);
         } catch (NoSuchElementException e) {
             System.out.println("The WebElement Search Field couldn't be found.");
             // Imprimir la información detallada de la excepción
