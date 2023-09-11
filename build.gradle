@@ -22,6 +22,9 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
     testImplementation 'io.cucumber:cucumber-java:7.13.0'
     testImplementation 'io.cucumber:cucumber-junit:7.13.0'
+    // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
+    implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.14.0'
+
 }
 
 test {
