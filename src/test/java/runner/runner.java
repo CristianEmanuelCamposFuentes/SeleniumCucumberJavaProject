@@ -4,7 +4,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-import pages.BasePage;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -12,7 +12,7 @@ import pages.BasePage;
 		glue = "steps",
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "json:target/cucumber-reports.json"},
 		monochrome = true,
-		tags = "@Test"
+		tags = "@Manzana"
 
 )
 
@@ -22,7 +22,7 @@ import pages.BasePage;
 public class runner {
 	@AfterClass
 	public static void cleanDriver() {
-		BasePage.closeBrowser();
+//		BasePage.closeBrowser();
 	}
 }
 
