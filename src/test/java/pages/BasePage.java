@@ -60,7 +60,7 @@ public class BasePage {
 	}
 
 	public static void closeBrowser(){
-//		driver.quit();
+		driver.quit();
 	}
 
 	// Metodo que devuelve un web element y Selenium puede trabajar con el, se va a crear esta instancia del WebElement y
