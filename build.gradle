@@ -14,18 +14,25 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.10.0'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.12.1'
     testImplementation(platform('org.junit:junit-bom:5.9.3'))
     testImplementation('org.junit.jupiter:junit-jupiter')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
-    testImplementation 'io.cucumber:cucumber-java:7.13.0'
-    testImplementation 'io.cucumber:cucumber-junit:7.13.0'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.14.0'
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.14.0'
+
     // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
     implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.14.0'
-
 }
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
 
 test {
     systemProperty "cucumber.options", System.getProperty("cucumber.options")
