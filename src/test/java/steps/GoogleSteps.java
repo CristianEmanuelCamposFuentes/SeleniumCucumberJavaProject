@@ -30,6 +30,10 @@ public class GoogleSteps {
 	}
 	@Then("^the results match the criteria$")
 	public void validateResults(){
-		Assert.assertEquals("Texto que esperamos", google.firstResult());
+		String actualResult = google.firstResult();
+		String expectedText = "Villa La Angostura";
+
+		Assert.assertTrue(actualResult.contains(expectedText));
+
 	}
 }

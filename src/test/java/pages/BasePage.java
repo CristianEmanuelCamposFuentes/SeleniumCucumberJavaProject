@@ -36,6 +36,9 @@ public class BasePage {
 		// Donde dice "taba_" reemplazar por tu usuario en Windows
 //		chromeOptions.addArguments("user-data-dir=C:\\Users\\crist\\AppData\\Local\\Google\\Chrome\\User Data");
 
+		// Setear el ChromeDriver
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\crist\\IdeaProjects\\SeleniumCucumberJavaProject\\src\\test\\resources\\chromedriver\\chromedriver.exe");
+
 		// Instancia del navegador
 		driver = new ChromeDriver(chromeOptions);
 		// La instancia de la espera, en caso de que no conecte agregar una excepcion
