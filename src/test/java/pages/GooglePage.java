@@ -1,15 +1,11 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 public class GooglePage extends BasePage{
 
 	// Defino los selectores de elementos
 	private String searchButton = "//input[@value='Buscar con Google']";
 	private String searchTextField = "//textarea[@name='q']";
-	private String firstResult = "";
-
+	private String firstResult = "Texto que esperamos";
 
 	// Constructor , es necesario para heredar
 	public GooglePage() {

@@ -23,7 +23,7 @@ public class BasePage {
 	protected static WebDriverWait wait;
 	protected static Actions action;
 
-	// Creamos un bloque estatico a donde creamos el driver una vez para todas las instancias que creemos en las otras clases de pagina
+	// Creamos un bloque estatico a donde creamos el driver una vez para todas las instancias que creemos en las otras clases de página
 	// Y agregamos una espera de 10 segundos
 	static {
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -57,13 +57,13 @@ public class BasePage {
 	}
 
 	public static void closeBrowser(){
-		driver.quit();
+//		driver.quit();
 	}
 
 	// Metodo que devuelve un web element y Selenium puede trabajar con el, se va a crear esta instancia del WebElement y
-	// Navegador (con sus metodos), para despues a traves de la herencia reutilizar en tod o el proyecto.
+	// Navegador (con sus metodos), para después a traves de la herencia reutilizar en tod o el proyecto.
 	private WebElement Find(String locator){
-		// Espera hasta que el elemento este presente en la pagina
+		// Espera hasta que el elemento este presente en la página
 		// Utiliza el objeto wait para esperar, lleva dos parametros: WebDriverWait(instanciaDelNavegador, tiempoDeEspera)
 		return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
 	}
