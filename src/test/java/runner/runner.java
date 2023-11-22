@@ -21,9 +21,9 @@ import pages.BasePage;
 	Esta clase va a unir todas las funcionalidades, y los features
  * */
 public class runner {
-	@AfterClass
-	public static void cleanDriver() {
-		BasePage.closeBrowser();
-	}
+//	@AfterClass
+//	public static void cleanDriver() {
+//		BasePage.closeBrowser();
+//	}
 }
 
