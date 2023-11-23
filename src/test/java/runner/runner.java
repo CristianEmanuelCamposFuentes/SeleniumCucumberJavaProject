@@ -13,8 +13,7 @@ import pages.BasePage;
 		glue = "steps",
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "json:target/cucumber-reports.json"},
 		monochrome = true,
-		tags = "@Manzana"
-
+		tags = "@Test1"
 )
 
 /* *

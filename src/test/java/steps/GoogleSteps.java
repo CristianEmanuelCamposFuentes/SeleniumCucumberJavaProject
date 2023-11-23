@@ -32,8 +32,7 @@ public class GoogleSteps {
 	public void validateResults(){
 		String actualResult = google.firstResult();
 		String expectedText = "Villa La Angostura";
-
 		Assert.assertTrue(actualResult.contains(expectedText));
-
 	}
+
 }

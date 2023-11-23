@@ -7,6 +7,7 @@ Feature: I can find a city inside a state.
     Then I can find <city> in the list
 
     Examples:
-      | state      | city              |
-      | Washington | Washington        |
-      | Illinois   | Washingtonllinois |
+      | state      | city       |
+      | Washington | Washington |
+      | New York   | New York   |
+      | Chicago    | Chicago   |

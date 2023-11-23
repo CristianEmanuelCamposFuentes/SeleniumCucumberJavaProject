@@ -77,7 +77,7 @@ public class BasePage {
 		* El objeto By en Selenium se utiliza para localizar elementos en la página web. En otras palabras, es una forma
 		*  de decirle a Selenium cómo encontrar un elemento específico en el DOM (Documento de Objeto del Modelo) de la página.
 		* */
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
 
 		element.click();
 		// Dado un xpath (locator), va a localizarlo y va a hacer un click sobre este elemento
