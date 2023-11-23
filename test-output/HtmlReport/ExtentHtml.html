@@ -40,7 +40,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -50,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>nov. 22, 2023 09:05:51 p. m.</span>
+			<span class='label blue darken-3 suite-start-time'>nov. 22, 2023 09:15:13 p. m.</span>
 			</a>
 		</ul>
 	</div>
@@ -65,7 +64,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -119,12 +118,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
-                    <span class='strong'>0</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -137,12 +136,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='66%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>3</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
-                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,12 +156,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='88%'>
-                    <span class='strong'>8</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>9</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='11%'>
-                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -185,11 +184,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>I can find a city inside a state.</span>
-						<span class='test-time'>nov. 22, 2023 09:05:52 p. m.</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>nov. 22, 2023 09:15:14 p. m.</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -199,14 +198,14 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario outline node' test-id='2' status='fail'>
+<div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 05.331</span>
+	<span class='duration right label'>00 00 05.752</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: As a Test Engineer, I want to validate that a text is present in the List.</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: As a Test Engineer, I want to validate that a text is present in the List.</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>state</td><td>city</td></tr><tr><td>Washington</td><td>Washington</td></tr><tr><td>New York</td><td>New York</td></tr><tr><td>Chicago</td><td>Chicago</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>state</td><td>city</td></tr><tr><td>Washington</td><td>Washington</td></tr><tr><td>New York</td><td>New York</td></tr><tr><td>Hawaii</td><td>Hawaii</td></tr></table></div>
 	
 	
 	<ul class='steps'>
@@ -254,8 +253,8 @@
 				</li>
 			</ul>
 		</li>
-		<li test-id='11' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>As a Test Engineer, I want to validate that a text is present in the List.</div>
+		<li test-id='11' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>As a Test Engineer, I want to validate that a text is present in the List.</div>
 
 				<div class='category-list'>
 						<span class='category label'>@Test1</span>
@@ -267,16 +266,12 @@
 
 				</li>
 				<li test-id='13' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="steps.ListSteps.searchTheList(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I search Chicago in the list</h6>
+					<h6 class="step-name" title="steps.ListSteps.searchTheList(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I search Hawaii in the list</h6>
 
 				</li>
-				<li test-id='14' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="steps.ListSteps.theTableIsThere(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then I can find Chicago in the list</h6>
+				<li test-id='14' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="steps.ListSteps.theTableIsThere(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can find Hawaii in the list</h6>
 
-							<textarea disabled class="code-block">java.lang.Error: The text is not on the list: FAILED!
-	at steps.ListSteps.theTableIsThere(ListSteps.java:31)
-	at ?.I can find Chicago in the list(file:///C:/Users/crist/IdeaProjects/SeleniumCucumberJavaProject/src/test/resources/features/ListPageTests.feature:7)
-</textarea>
 				</li>
 			</ul>
 		</li>
@@ -328,14 +323,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Test1</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
-						<span class='label fail'>1</span>
+						<span class='label pass'>3</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
 							
 						</div>
 						<div class='category-tests'>
@@ -349,19 +343,19 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>nov. 22, 2023 09:05:52 p. m.</td>
+										<td>nov. 22, 2023 09:15:14 p. m.</td>
 										<td class='linked' test-id='3'>As a Test Engineer, I want to validate that a text is present in the List.</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>nov. 22, 2023 09:05:55 p. m.</td>
+										<td>nov. 22, 2023 09:15:17 p. m.</td>
 										<td class='linked' test-id='7'>As a Test Engineer, I want to validate that a text is present in the List.</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>nov. 22, 2023 09:05:56 p. m.</td>
+										<td>nov. 22, 2023 09:15:18 p. m.</td>
 										<td class='linked' test-id='11'>As a Test Engineer, I want to validate that a text is present in the List.</td>
-										<td><span class='test-status Fail'>Fail</span></td>
+										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -377,65 +371,7 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.Error</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>nov. 22, 2023 09:05:57 p. m.</td>
-										<td class='linked' test-id='14'>Then I can find Chicago in the list</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.Error: The text is not on the list: FAILED!
-	at steps.ListSteps.theTableIsThere(ListSteps.java:31)
-	at ?.I can find Chicago in the list(file:///C:/Users/crist/IdeaProjects/SeleniumCucumberJavaProject/src/test/resources/features/ListPageTests.feature:7)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -461,19 +397,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>nov. 22, 2023 09:05:51 p. m.</div>
+					<div class='panel-lead'>nov. 22, 2023 09:15:13 p. m.</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>nov. 22, 2023 09:05:57 p. m.</div>
+			 		<div class='panel-lead'>nov. 22, 2023 09:15:19 p. m.</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 05.800</div>
+					<div class='panel-lead'>00 00 06.184</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -490,11 +426,11 @@
 						</tr>
 						<tr>
 							<td>@Test1</td>
-							<td>2</td>
-							<td>1</td>
+							<td>3</td>
+							<td>0</td>
 							<td>0</td>
 							<td>
-									66,667%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -509,23 +445,23 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 3,
-				passChild: 2,
-				failChild: 1,
+				passChild: 3,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 9,
-				passGrandChild: 8,
-				failGrandChild: 1,
+				passGrandChild: 9,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -536,7 +472,7 @@
 		
 		<script>
 			var timeline = {
-			        "I can find a city inside a state.":5.333
+			        "I can find a city inside a state.":5.755
 			};
 		</script>
 		

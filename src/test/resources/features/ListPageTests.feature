@@ -10,4 +10,4 @@ Feature: I can find a city inside a state.
       | state      | city       |
       | Washington | Washington |
       | New York   | New York   |
-      | Chicago    | Chicago   |
+      | Hawaii     | Hawaii     |
