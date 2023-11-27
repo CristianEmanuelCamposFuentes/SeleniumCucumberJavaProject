@@ -34,5 +34,4 @@ public class GoogleSteps {
 		String expectedText = "Villa La Angostura";
 		Assert.assertTrue(actualResult.contains(expectedText));
 	}
-
 }
