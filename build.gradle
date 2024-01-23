@@ -1,9 +1,10 @@
 plugins {
-    id("java")
+    id 'java'
 }
 
-group = "Curso Udemy"
-version = "1.0-SNAPSHOT"
+group = 'Curso Udemy'
+version = '1.0-SNAPSHOT'
+
 java {
     sourceCompatibility = JavaVersion.VERSION_15
     targetCompatibility = JavaVersion.VERSION_15
@@ -14,18 +15,24 @@ repositories {
 }
 
 dependencies {
-// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    // Dependencias de prueba
+    testImplementation 'net.serenity-bdd:serenity-core:1.1.1'
+    testImplementation 'net.serenity-bdd:serenity-junit:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:1.7.1'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.7'
+
+    // Dependencias de implementación
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.12.1'
-    testImplementation(platform('org.junit:junit-bom:5.9.3'))
-    testImplementation('org.junit.jupiter:junit-jupiter')
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
-    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation platform('org.junit:junit-bom:5.9.3')
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+
+    // Dependencias de Cucumber
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.14.0'
-// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
     testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.14.0'
 
-    // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
+    // Dependencia de Extent Reports
     implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.14.0'
 }
 
@@ -33,7 +40,6 @@ compileJava {
     options.encoding = 'UTF-8'
 }
 
-
 test {
-    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+    systemProperty 'cucumber.options', System.getProperty('cucumber.options')
 }
